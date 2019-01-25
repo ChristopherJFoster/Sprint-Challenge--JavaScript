@@ -46,6 +46,8 @@ Edit this document to include your answers after each question. Make sure to lea
 
    Closure refers to the fact that in JavaScript, functional expressions capture their lexical context at the time they are expressed (note that a function declaration will not create closure). When a function is expressed inside another function, the expressed function’s scope at that time includes the local and global scopes (we’ll assume here that the function is expressed only one function deep). Closure means the expressed function captures references to the variables available at the time in the local and global scopes. This remains true even if the expressed function is called outside the function in which it was expressed. The expressed function will “see” variables in the local scope even when it is called in the global scope:
 
+   (Sorry about the code formatting. I'm not sure how to fix it.)
+
    const aFunction = () => {
    const greeting = "Hello!";
    const anotherFunction = () => {
@@ -56,7 +58,7 @@ Edit this document to include your answers after each question. Make sure to lea
    const yetAnotherFunction = aFunction();
    yetAnotherFunction(); // Hello!
 
-Closure is the reason that yetAnotherFunction() logs Hello! even though greeting is in the local scope of aFunction().
+   Closure is the reason that yetAnotherFunction() logs Hello! even though greeting is in the local scope of aFunction().
 
 4. Describe the four rules of the 'this' keyword.
 
